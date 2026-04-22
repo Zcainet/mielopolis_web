@@ -1,0 +1,26 @@
+{
+  "name": "Mielópolis: La Reina Caída",
+  "short_name": "Mielópolis",
+  "description": "Aplicación web progresiva del proyecto Mielópolis: La Reina Caída.",
+  "lang": "es-MX",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff7df",
+  "theme_color": "#f7b1db",
+  "icons": [
+    {
+      "src": "./img/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./img/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

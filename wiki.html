@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7b1db">
+  <link rel="manifest" href="manifest.json?v=4">
+  <link rel="icon" type="image/png" href="img/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="Wiki y enciclopedia de Mielópolis: La Reina Caída.">
+  <title>Wiki | Mielópolis</title>
+  <link rel="stylesheet" href="css/styles.css?v=web1">
+</head>
+<body class="page-wiki">
+  <div class="page-shell">
+    <header class="topbar">
+  <div class="brand-wrap">
+    <a class="brand brand-logo" href="index.html" aria-label="Ir al inicio de Mielópolis">
+      <img src="img/logo-mielopolis-header.png" alt="Mielópolis: La Reina Caída" class="site-logo">
+    </a>
+
+    <a class="studio-badge" href="nosotros.html" aria-label="Ir a la sección de Crow Studios">
+      <img src="img/crow-studio-logo.png" alt="Logo de Crow Studios">
+      <div class="studio-badge-text">
+        <strong>CROW STUDIOS</strong>
+        <span>Estudio creador del proyecto</span>
+      </div>
+    </a>
+  </div>
+  <nav class="menu" aria-label="Navegación principal">
+    <a href="index.html">INICIO</a>
+    <a href="mundo.html">MUNDO</a>
+    <a href="personajes.html">PERSONAJES</a>
+    <a href="gameplay.html">GAMEPLAY</a>
+    <a href="wiki.html">WIKI</a>
+    <a href="comunidad.html">COMUNIDAD</a>
+    <a href="nosotros.html">NOSOTROS</a>
+  </nav>
+</header>
+
+    <main>
+      <section class="section paper-lilac">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="alert-tag">ARCHIVO / WIKI</div>
+              <h2 class="page-title">LORE DE MIELÓPOLIS</h2>
+            </div>
+          </div>
+
+          <div class="wiki-layout">
+            <aside class="wiki-side">
+              <h3>CATEGORÍAS RÁPIDAS</h3>
+              <div class="wiki-list">
+                <a href="#" class="wiki-pill" data-filter="Mielópolis">MIELÓPOLIS</a>
+                <a href="#" class="wiki-pill" data-filter="Reina">REINA</a>
+                <a href="#" class="wiki-pill" data-filter="Sonrisas">SR. SONRISAS</a>
+                <a href="#" class="wiki-pill" data-filter="Blue">BLUE</a>
+                <a href="#" class="wiki-pill" data-filter="Rose">ROSE</a>
+                <a href="#" class="wiki-pill" data-filter="Buble">BUBLE</a>
+                <a href="#" class="wiki-pill" data-filter="monstruos">MONSTRUOS</a>
+                <a href="#" class="wiki-pill" data-filter="">MOSTRAR TODO</a>
+              </div>
+            </aside>
+
+            <div class="wiki-main">
+              <h3>BUSCADOR DE LORE</h3>
+              <p>Filtra las entradas para revisar rápidamente la historia del reino, sus personajes, el proyecto de la Reina y los aportes de la comunidad.</p>
+
+              <div class="tag-row">
+                <div class="chip">Lore</div>
+                <div class="chip">Teorías</div>
+                <div class="chip">Comunidad</div>
+                <div class="chip">Registros</div>
+              </div>
+
+              <div class="search-row">
+                <input id="wikiSearchInput" type="text" placeholder="Buscar en la wiki...">
+                <button id="wikiSearchBtn" type="button" class="btn yellow">BUSCAR</button>
+              </div>
+
+              <div id="wikiNotice" class="notice"></div>
+
+              <div class="wiki-list" style="margin-top:18px;">
+                <div class="wiki-item">
+                  <strong>MIELÓPOLIS</strong>
+                  <p>Un reino hermoso, tierno y lleno de amor real. Antes de la tragedia, su felicidad no era una mentira ni una obligación.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>LA REINA</strong>
+                  <p>Gobernante de Mielópolis. Al enfermar y no tener sucesor, creó un proyecto para seguir protegiendo a su pueblo con su gran amor.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>SR. SONRISAS</strong>
+                  <p>Antagonista misterioso. Ayudó a la Reina con el proyecto, pero tras su muerte mostró sus verdaderas intenciones y deformó todo lo que tocó.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>ECOS DE LA REINA</strong>
+                  <p>Fragmentos, notas y recuerdos del proyecto de protección. Aquí se conserva lo que nació del amor antes de ser corrompido.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>BLUE</strong>
+                  <p>Uno de los personajes elegibles del videojuego. Su ruta permite vivir el conflicto de Mielópolis desde una perspectiva jugable.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>ROSE</strong>
+                  <p>Otra protagonista elegible. Recorre el reino, combate enemigos y forma parte de la exploración del lore del juego.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>BUBLE</strong>
+                  <p>Tercer personaje seleccionable. Aporta otra forma de experimentar la aventura y la caída del reino.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>MONSTRUOS Y ABOMINACIONES</strong>
+                  <p>Resultado de las modificaciones de Sr. Sonrisas sobre el proyecto. Son la deformación del propósito original.</p>
+                </div>
+                <div class="wiki-item">
+                  <strong>COMUNIDAD</strong>
+                  <p>Si quieres compartir teorías del lore, opiniones o comentarios del juego, puedes hacerlo desde la sección de Comunidad.</p>
+                  <a href="comunidad.html" class="btn yellow" style="margin-top:10px;">IR A COMUNIDAD</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-band footer-web">
+  <div class="container footer-web-shell">
+    <div class="footer-web-brand">
+      <a class="footer-game" href="index.html" aria-label="Ir al inicio de Mielópolis">
+        <div class="footer-game-mark" aria-hidden="true">M</div>
+        <div>
+          <strong>MIELÓPOLIS: LA REINA CAÍDA</strong>
+          <span>Sitio oficial del proyecto, lore y presentación del videojuego</span>
+        </div>
+      </a>
+
+      <a class="footer-studio" href="nosotros.html" aria-label="Ir a la sección de Crow Studios">
+        <img src="img/crow-studio-logo.png" alt="Logo de Crow Studios">
+        <div>
+          <strong>CROW STUDIOS</strong>
+          <span>Estudio creador, propuesta visual y desarrollo del universo</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="index.html">Inicio</a>
+        <a href="mundo.html">Mundo</a>
+        <a href="personajes.html">Personajes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contenido</h4>
+        <a href="gameplay.html">Gameplay</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="comunidad.html">Comunidad</a>
+      </div>
+      <div class="footer-col">
+        <h4>Proyecto</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <span>Videojuego escolar para PC</span>
+        <span>Estética cute oscura</span>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>Portal web del proyecto Mielópolis</span>
+      <span>Diseño orientado a experiencia web de escritorio</span>
+    </div>
+  </div>
+</footer>
+      
+    </main>
+  </div>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <h3 id="modalTitle">Aviso</h3>
+      <p id="modalText"></p>
+      <div class="modal-actions">
+        <button id="closeModal" class="btn yellow" type="button">CERRAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=web1"></script>
+</body>
+</html>

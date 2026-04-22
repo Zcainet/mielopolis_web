@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7b1db">
+  <link rel="manifest" href="manifest.json?v=7">
+  <link rel="icon" type="image/png" href="img/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="Comunidad oficial de Mielópolis: teorías, lore, fanart y publicaciones de la comunidad en un formato limpio y ordenado.">
+  <title>Comunidad | Mielópolis</title>
+  <link rel="stylesheet" href="css/styles.css?v=clean1">
+</head>
+<body class="page-community page-community-clean">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <a class="brand brand-logo" href="index.html" aria-label="Ir al inicio de Mielópolis">
+          <img src="img/logo-mielopolis-header.png" alt="Mielópolis: La Reina Caída" class="site-logo">
+        </a>
+
+        <a class="studio-badge" href="nosotros.html" aria-label="Ir a la sección de Crow Studios">
+          <img src="img/crow-studio-logo.png" alt="Logo de Crow Studios">
+          <div class="studio-badge-text">
+            <strong>CROW STUDIOS</strong>
+            <span>Estudio creador del proyecto</span>
+          </div>
+        </a>
+      </div>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">INICIO</a>
+        <a href="mundo.html">MUNDO</a>
+        <a href="personajes.html">PERSONAJES</a>
+        <a href="gameplay.html">GAMEPLAY</a>
+        <a href="wiki.html">WIKI</a>
+        <a href="comunidad.html" class="active">COMUNIDAD</a>
+        <a href="nosotros.html">NOSOTROS</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section paper-blue community-clean-shell">
+        <div class="container community-clean-container">
+          <section class="community-clean-hero card tone-cream">
+            <div class="community-clean-hero-copy">
+              <div class="badge">COMUNIDAD</div>
+              <h1>Un espacio para ideas, teorías y hallazgos de Mielópolis</h1>
+              <p>Explora publicaciones de la comunidad, descubre contenido destacado y comparte tus ideas sobre el mundo, el lore y los misterios del reino.</p>
+              <div class="community-clean-hero-actions">
+                <button type="button" class="btn pink" id="openComposerBtn">CREAR PUBLICACIÓN</button>
+              </div>
+              <div class="community-clean-stats-inline">
+                <div class="clean-hero-stat"><strong id="metricAuthors">0</strong><span>Miembros activos</span></div>
+                <div class="clean-hero-stat"><strong id="metricThreads">0</strong><span>Publicaciones</span></div>
+                <div class="clean-hero-stat"><strong id="metricReplies">0</strong><span>Comentarios</span></div>
+              </div>
+            </div>
+            <div class="community-clean-hero-visual">
+              <div class="community-clean-hero-visual-frame">
+                <img src="img/Castle.png" alt="Castillo de Mielópolis">
+              </div>
+            </div>
+          </section>
+
+          <section class="community-clean-section">
+            <div class="section-head section-head--clean">
+              <div>
+                <div class="badge">SELECCIÓN</div>
+                <h2 class="community-subtitle">DESTACADOS</h2>
+              </div>
+            </div>
+            <div id="featuredContainer" class="community-featured-clean"></div>
+          </section>
+
+          <section class="community-clean-section">
+            <div class="section-head section-head--clean">
+              <div>
+                <div class="badge">EXPLORAR</div>
+                <h2 class="community-subtitle">CATEGORÍAS</h2>
+              </div>
+            </div>
+            <div id="categoryCards" class="community-category-grid"></div>
+          </section>
+
+          <section class="community-clean-section community-feed-layout">
+            <div class="community-feed-main card tone-lavender">
+              <div class="section-head section-head--clean section-head--between">
+                <div>
+                  <div class="badge">PUBLICACIONES</div>
+                  <h2 class="community-subtitle">RECIENTES</h2>
+                </div>
+                <button type="button" class="btn yellow btn-small" id="openComposerBtnCenter">NUEVA PUBLICACIÓN</button>
+              </div>
+
+              <div class="community-clean-controls">
+                <input id="searchInput" type="text" placeholder="Buscar por título, autor o contenido...">
+                <select id="filterCategory">
+                  <option value="Todas">Todas las categorías</option>
+                  <option value="Teoría">Teoría</option>
+                  <option value="Lore">Lore</option>
+                  <option value="Opinión">Opinión</option>
+                  <option value="Hallazgo">Hallazgo</option>
+                  <option value="Sugerencia">Sugerencia</option>
+                </select>
+                <div class="community-clean-sortbar">
+                  <button type="button" class="filter-btn is-active" data-sort="recent">RECIENTES</button>
+                  <button type="button" class="filter-btn" data-sort="title">A-Z</button>
+                  <button type="button" class="filter-btn" data-sort="author">AUTORES</button>
+                </div>
+              </div>
+
+              <div class="community-clean-topic-pills" id="topicQuickFilters">
+                <button type="button" class="topic-pill is-active" data-quick-category="Todas">Todo</button>
+                <button type="button" class="topic-pill" data-quick-category="Teoría">Teorías</button>
+                <button type="button" class="topic-pill" data-quick-category="Lore">Lore</button>
+                <button type="button" class="topic-pill" data-quick-category="Opinión">Opinión</button>
+                <button type="button" class="topic-pill" data-quick-category="Hallazgo">Hallazgos</button>
+                <button type="button" class="topic-pill" data-quick-category="Sugerencia">Sugerencias</button>
+              </div>
+
+              <div class="community-clean-results-row">
+                <span class="forum-results-pill" id="resultsCount">0 publicaciones</span>
+                <span class="community-connection-label" id="communityConnectionLabel" data-status="connecting">Conectando con Firebase...</span>
+              </div>
+
+              <div id="postsContainer" class="community-post-list-clean"></div>
+            </div>
+
+            <aside class="community-feed-side card tone-cream">
+              <div class="section-head section-head--clean">
+                <div>
+                  <div class="badge">MOVIMIENTO</div>
+                  <h2 class="community-subtitle">ACTIVIDAD RECIENTE</h2>
+                </div>
+              </div>
+              <div id="activityList" class="community-activity-list"></div>
+              <article class="community-clean-mini-block">
+                <div class="badge">CLIMA</div>
+                <strong id="metricCategory">-</strong>
+                <p>Categoría con más movimiento dentro de la comunidad.</p>
+              </article>
+            </aside>
+          </section>
+        </div>
+      </section>
+
+      <div class="community-modal community-modal--wide" id="communityReaderModal" aria-hidden="true">
+        <div class="community-modal-backdrop" data-close-reader="true"></div>
+        <div class="community-modal-dialog panel tone-yellow" role="dialog" aria-modal="true" aria-labelledby="communityReaderTitle">
+          <div class="community-modal-head">
+            <div>
+              <div class="badge">LECTURA</div>
+              <h3 class="community-subtitle" id="communityReaderTitle">PUBLICACIÓN SELECCIONADA</h3>
+            </div>
+            <button type="button" class="community-modal-close" id="closeReaderBtn" aria-label="Cerrar lectura">×</button>
+          </div>
+          <div id="threadViewer" class="thread-viewer is-empty">
+            <div class="thread-viewer-empty">
+              <strong>Selecciona una publicación</strong>
+              <p>Aquí aparecerá el contenido completo con sus respuestas en una vista continua y ordenada.</p>
+            </div>
+          </div>
+          <div class="community-modal-actions community-modal-actions--between">
+            <span class="forum-results-pill" id="readerHint">Abre una publicación para leerla completa.</span>
+            <button type="button" class="btn pink" id="openReplyModalBtn">COMENTAR</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-modal" id="communityReplyModal" aria-hidden="true">
+        <div class="community-modal-backdrop" data-close-reply="true"></div>
+        <div class="community-modal-dialog panel tone-mint" role="dialog" aria-modal="true" aria-labelledby="communityReplyTitle">
+          <div class="community-modal-head">
+            <div>
+              <div class="badge">RESPONDER</div>
+              <h3 class="community-subtitle" id="communityReplyTitle">DEJAR COMENTARIO</h3>
+            </div>
+            <button type="button" class="community-modal-close" id="closeReplyBtn" aria-label="Cerrar respuesta">×</button>
+          </div>
+          <form id="replyForm" class="community-form community-form-pro community-v2-form community-modal-form">
+            <div class="community-modal-grid">
+              <div>
+                <label for="replyUsername">Nombre</label>
+                <input id="replyUsername" name="replyUsername" type="text" maxlength="30" placeholder="Ejemplo: AgenteChispa" required>
+              </div>
+              <div>
+                <label for="replyTag">Rol</label>
+                <select id="replyTag" name="replyTag">
+                  <option value="Ciudadano">Ciudadano</option>
+                  <option value="Teórico">Teórico</option>
+                  <option value="Archivista">Archivista</option>
+                  <option value="Explorador">Explorador</option>
+                </select>
+              </div>
+            </div>
+            <label for="replyMessage">Comentario</label>
+            <textarea id="replyMessage" name="replyMessage" rows="6" maxlength="500" placeholder="Escribe tu comentario sobre la publicación seleccionada..." required></textarea>
+            <div class="community-modal-actions">
+              <button type="submit" class="btn pink">RESPONDER</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="community-modal" id="communityComposerModal" aria-hidden="true">
+        <div class="community-modal-backdrop" data-close-composer="true"></div>
+        <div class="community-modal-dialog panel tone-yellow" role="dialog" aria-modal="true" aria-labelledby="communityComposerTitle">
+          <div class="community-modal-head">
+            <div>
+              <div class="badge">PUBLICAR</div>
+              <h3 class="community-subtitle" id="communityComposerTitle">CREAR NUEVA PUBLICACIÓN</h3>
+            </div>
+            <button type="button" class="community-modal-close" id="closeComposerBtn" aria-label="Cerrar ventana de publicación">×</button>
+          </div>
+          <form id="communityForm" class="community-form community-form-pro community-v2-form community-modal-form">
+            <div class="community-modal-grid">
+              <div>
+                <label for="username">Nombre</label>
+                <input id="username" name="username" type="text" maxlength="30" placeholder="Ejemplo: AgenteChispa" required>
+              </div>
+              <div>
+                <label for="category">Categoría</label>
+                <select id="category" name="category" required>
+                  <option value="">Selecciona una categoría</option>
+                  <option value="Teoría">Teoría</option>
+                  <option value="Lore">Lore</option>
+                  <option value="Opinión">Opinión</option>
+                  <option value="Hallazgo">Hallazgo</option>
+                  <option value="Sugerencia">Sugerencia</option>
+                </select>
+              </div>
+            </div>
+            <label for="title">Título de la publicación</label>
+            <input id="title" name="title" type="text" maxlength="80" placeholder="Escribe un título claro e interesante" required>
+
+            <label for="message">Contenido</label>
+            <textarea id="message" name="message" rows="8" maxlength="700" placeholder="Comparte tu teoría, descubrimiento o propuesta para la comunidad..." required></textarea>
+
+            <div class="form-actions community-modal-actions">
+              <button type="submit" class="btn pink">PUBLICAR</button>
+              <button type="button" class="btn yellow" id="clearPostsBtn">REINICIAR CAMPOS</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer class="footer-band footer-web">
+        <div class="container footer-web-shell">
+          <div class="footer-web-brand">
+            <a class="footer-game" href="index.html" aria-label="Ir al inicio de Mielópolis">
+              <div class="footer-game-mark" aria-hidden="true">M</div>
+              <div>
+                <strong>MIELÓPOLIS: LA REINA CAÍDA</strong>
+                <span>Sitio oficial del proyecto, lore y presentación del videojuego</span>
+              </div>
+            </a>
+
+            <a class="footer-studio" href="nosotros.html" aria-label="Ir a la sección de Crow Studios">
+              <img src="img/crow-studio-logo.png" alt="Logo de Crow Studios">
+              <div>
+                <strong>CROW STUDIOS</strong>
+                <span>Estudio creador, propuesta visual y desarrollo del universo</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-col">
+              <h4>Explorar</h4>
+              <a href="index.html">Inicio</a>
+              <a href="mundo.html">Mundo</a>
+              <a href="personajes.html">Personajes</a>
+            </div>
+            <div class="footer-col">
+              <h4>Contenido</h4>
+              <a href="gameplay.html">Gameplay</a>
+              <a href="wiki.html">Wiki</a>
+              <a href="comunidad.html">Comunidad</a>
+            </div>
+            <div class="footer-col">
+              <h4>Proyecto</h4>
+              <a href="nosotros.html">Nosotros</a>
+              <span>Videojuego escolar para PC</span>
+              <span>Estética cute oscura</span>
+            </div>
+          </div>
+
+          <div class="footer-legal">
+            <span>Portal web del proyecto Mielópolis</span>
+            <span>Diseño orientado a experiencia web limpia y ordenada</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div id="communityToast" class="community-toast" aria-live="polite"></div>
+
+  <script src="js/main.js?v=5"></script>
+  <script type="module" src="js/comunidad.js?v=clean1"></script>
+</body>
+</html>
