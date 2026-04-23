@@ -163,7 +163,7 @@ body.is-standalone .topbar{
 .brand-logo{display:flex;align-items:center;min-width:0}
 .site-logo{
   display:block;
-  height:72px;
+  height:6rem;
   width:auto;
   max-width:min(62vw,560px);
   object-fit:contain;
@@ -854,7 +854,7 @@ body.no-scroll{
     border-radius:18px;
   }
   .menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
-  .site-logo{height:62px;max-width:100%}
+
   .container{width:min(var(--max), calc(100% - 24px))}
   .section{padding:28px 0 32px}
   .hero{padding:34px 0 40px}
@@ -910,7 +910,6 @@ body.no-scroll{
 }
 
 
-/* ===== Diseño mejorado: identidad por página ===== */
 :root{
   --gold:#ffd978;
   --cream-glow:rgba(255,247,223,.74);
@@ -1410,7 +1409,6 @@ body.page-about .cta-card:first-child{
 }
 
 
-/* === COMMUNITY PRO FORUM === */
 .page-community-pro .section{
   position:relative;
   overflow:hidden;
@@ -1731,7 +1729,7 @@ body.page-about .cta-card:first-child{
   }
 }
 
-/* ===== Forum phase 2 ===== */
+
 .thread-replies-shell{
   margin-top:18px;
   display:grid;
@@ -1814,7 +1812,7 @@ body.page-about .cta-card:first-child{
 }
 
 
-/* === COMMUNITY LAYOUT V2 REDESIGN === */
+
 .page-community-pro .community-layout-v2-shell{
   overflow:visible;
 }
@@ -2051,7 +2049,7 @@ body.page-about .cta-card:first-child{
 }
 
 
-/* === WEB MODE REFINEMENT === */
+
 :root{
   --max: 1380px;
   --radius: 20px;
@@ -2088,7 +2086,6 @@ main{padding-top:calc(var(--header-h) + 20px);}
 .topbar::before{display:none;}
 .topbar.is-scrolled{background:rgba(255,249,239,.92);}
 .brand-wrap{gap:16px; flex:1 1 auto;}
-.site-logo{height:62px; max-width:min(38vw,460px);}
 .studio-badge{
   padding:9px 12px;
   border:1px solid rgba(33,26,82,.14);
@@ -2250,7 +2247,6 @@ main{padding-top:calc(var(--header-h) + 20px);}
 }
 
 
-/* Comunidad pro web v3 */
 .community-v2-topic-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .topic-pill{border:2px solid rgba(58,47,88,.16);background:rgba(255,255,255,.72);color:#40345e;font-weight:900;letter-spacing:.04em;border-radius:999px;padding:10px 14px;cursor:pointer;transition:.18s ease}
 .topic-pill.is-active,.topic-pill:hover{transform:translateY(-1px);background:#40345e;color:#fff;border-color:#40345e}
@@ -2316,8 +2312,6 @@ body.modal-open{overflow:hidden}
   .topic-pill,.community-modal-actions .btn{width:100%}
 }
 
-
-/* Comunidad layout v3: centro unificado */
 .community-v2-column--focus{display:block}
 .community-v3-thread-card{min-height:calc(100vh - 180px);position:relative}
 .community-v2-reader-card.community-v3-thread-card{padding:24px 24px 26px}
@@ -2338,7 +2332,6 @@ body.modal-open{overflow:hidden}
 @media (max-width:980px){.community-v2-shell{grid-template-columns:1fr}.community-v2-column--nav,.community-v2-column--compose{position:static}.community-v2-thread-list{max-height:none}.community-v3-thread-card{min-height:auto}}
 
 
-/* ===== Comunidad final: foro normal y limpio ===== */
 body.page-community-final .community-v2-shell,
 body.page-community-final .community-v2-column{display:contents;}
 
@@ -2595,8 +2588,6 @@ button:disabled{
   opacity:.72;
   filter:saturate(.85);
 }
-
-/* Comunidad final estilo limpio */
 .page-community-clean .section{padding-top:34px;padding-bottom:34px}
 .page-community-clean .container.community-clean-container{display:grid;gap:26px;max-width:1240px}
 .community-clean-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:24px;align-items:center;padding:28px 30px;overflow:hidden}
@@ -2693,7 +2684,6 @@ button:disabled{
 }
 
 
-/* Comunidad: lectura y responder en modales */
 .page-community-clean .community-feed-layout{align-items:start}
 .page-community-clean .community-modal--wide .community-modal-dialog{width:min(980px,100%)}
 .page-community-clean .thread-viewer{max-width:none}
@@ -2713,8 +2703,6 @@ button:disabled{
   .page-community-clean .community-modal-actions--between .forum-results-pill{width:100%;text-align:center;justify-content:center}
 }
 
-
-/* ===== PERSONAJES PRO ===== */
 body.page-characters .characters-hero-section{overflow:hidden}
 body.page-characters .characters-hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(320px,.8fr);gap:24px;align-items:stretch}
 body.page-characters .characters-main-title{max-width:15ch}
@@ -2765,4 +2753,72 @@ body.modal-open{overflow:hidden}
 .page-about .section-intro{
   font-size:1.02rem;
   letter-spacing:.02em;
+}
+
+.nosotros-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  gap: 0.9rem;
+}
+
+.nosotros-badge {
+  background: linear-gradient(135deg, #f6d6ff, #e7c6ff);
+  color: #5b3b73;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(91, 59, 115, 0.15);
+  box-shadow: 0 4px 12px rgba(91, 59, 115, 0.12);
+}
+
+.nosotros-title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #4c3566;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+}
+
+.nosotros-slogan {
+  max-width: 760px;
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #6b5587;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.nosotros-logo-frame {
+  margin-top: 0.8rem;
+  padding: 1.2rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(245,230,255,0.9));
+  border: 2px solid rgba(108, 85, 135, 0.12);
+  box-shadow: 0 10px 25px rgba(91, 59, 115, 0.14);
+}
+
+
+.nosotros-logo-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.nosotros-logo {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: clamp(180px, 30vw, 320px);
+  height: auto;
+  display: block;
+  image-rendering: auto;
+  border-radius: 15%;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+  transition: transform 0.3s ease;
 }
